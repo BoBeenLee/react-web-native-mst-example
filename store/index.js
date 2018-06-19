@@ -1,8 +1,8 @@
 import { types } from "mobx-state-tree";
-import { TodoStore } from './TodoStore';
+import TodoStore from './TodoStore';
 
 const Store = types.model({
-    todoStore: types.optional(TodoStore, {})
+    todoStore: TodoStore.create({ todos: [] })
 });
 
 export default Store;

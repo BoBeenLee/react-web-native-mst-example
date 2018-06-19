@@ -2,7 +2,7 @@ import { types } from "mobx-state-tree";
 import Todo from './Todo';
 
 const TodoStore = types.model({
-    todos: types.optional(types.array(Todo), [])
+    todos: types.optional(types.maybe(types.array(Todo)), [])
 }).actions(self => {
     const add = (name) => {
         self.todos.push(Todo.create({ name: name }));

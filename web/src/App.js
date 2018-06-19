@@ -1,14 +1,18 @@
+import { Provider } from 'mobx-react';
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import Store from '@app/store';
 
-const Container = styled.div``;
+import IndexPage from './pages';
+
+const store = Store.create();
 
 class App extends Component {
     render() {
         return (
-            <Container>
-                <button>Hello</button>
-            </Container>
+            <Provider store={store}>
+                <IndexPage />
+            </Provider>
         )
     }
 }

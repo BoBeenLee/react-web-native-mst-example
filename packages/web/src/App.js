@@ -1,21 +1,32 @@
-import { Provider } from 'mobx-react';
 import React, { Component } from 'react';
+import Store from '@app/store';
 import styled from 'styled-components';
-import Store from 'stores';
 
-import IndexPage from './pages';
+import { TodoListWeb } from '@app/view';
 
-const store = Store.create({
-    name: "Hello"
-});
+const Container = styled.div`
+
+`;
+
+const store = Store.create({});
+
+const todos = [{
+    name: "111"
+}, {
+    name: "123"
+}, {
+    name: "432"
+}]
+
 
 class App extends Component {
     render() {
         return (
-            <Provider store={store}>
-                <IndexPage />
-            </Provider>
-        )
+            <Container>
+                Hello World
+                {store.name}
+            </Container>
+        );
     }
 }
 

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import TodoList from '@app/view/TodoList/TodoList.web';
+import TodoList from 'views/TodoList/TodoList.web';
 
 const Container = styled.div``;
 

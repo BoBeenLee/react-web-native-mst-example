@@ -1,9 +1,12 @@
 {
+    "name": "lerna",
     "private": true,
-    "workspaces": [
-        "web",
-        "native",
-        "store",
-        "view"
-    ]
+    "scripts": {
+        "bootstrap": "lerna bootstrap",
+        "build:web": "lerna run build --scope={views,stores,web}",
+        "clean": "rm -rf ./packages/web/node_modules && rm -rf ./packages/native/node_modules && rm -rf ./packages/view/node_modules && rm -rf ./packages/store/node_modules"
+    },
+    "devDependencies": {
+        "lerna": "^2.11.0"
+    }
 }

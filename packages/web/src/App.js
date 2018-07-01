@@ -1,11 +1,13 @@
 import { Provider } from 'mobx-react';
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import Store from '@app/store';
+import Store from 'stores';
 
 import IndexPage from './pages';
 
-const store = Store.create();
+const store = Store.create({
+    name: "Hello"
+});
 
 class App extends Component {
     render() {
